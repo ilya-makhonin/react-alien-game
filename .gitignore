@@ -21,3 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea/
+
+src/auth0/
+src/components/Login.js
+
+package-lock.json
