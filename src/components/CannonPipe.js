@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const CannonPipe = (props) => {
-    console.log('CANNONPIPE - props.rotation: ' + props.rotation);
     const cannonPipeStyle = {
         fill: '#999',
         stroke: '#666',

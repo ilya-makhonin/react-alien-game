@@ -7,6 +7,7 @@ import store from './store/store';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
+    /* Интеграция React и Redux */
     <Provider store={store}>
         <Game />
     </Provider>,

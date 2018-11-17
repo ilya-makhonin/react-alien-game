@@ -1,4 +1,13 @@
 export const pathFromBezierCurve = (cubicBezierCurve) => {
+    /**
+     * @param cubicBezierCurve: type <object> like {initialAxis, initialControlPoint,
+     *                                              endingControlPoint, endingAxis}
+     * @const initialAxis: type <object> like { x: <int>, y: <int> }
+     * @const initialControlPoint: type <object> like { x: <int>, y: <int> }
+     * @const endingControlPoint: type <object> like { x: <int>, y: <int> }
+     * @const endingAxis: type <object> like { x: <int>, y: <int> }
+     * @return type <string> like 'M<int> <int> c <int> <int> <int> <int> <int> <int>'
+     */
     const {
         initialAxis, initialControlPoint, endingControlPoint, endingAxis,
     } = cubicBezierCurve;
@@ -13,6 +22,11 @@ export const pathFromBezierCurve = (cubicBezierCurve) => {
 export const radiansToDegrees = radians => ((radians * 180) / Math.PI);
 
 export const calculateAngle = (x1, y1, x2, y2) => {
+    /**
+     * This function
+     * @param type <float>
+     * @return type <float>/<int>
+     */
     if (x2 >= 0 && y2 >= 0) {
         return 90;
     } else if (x2 < 0 && y2 >= 0) {

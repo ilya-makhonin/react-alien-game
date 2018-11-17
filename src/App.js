@@ -7,6 +7,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.shoot = this.shoot.bind(this);
+        console.log(this.props);
     }
 
     componentDidMount() {

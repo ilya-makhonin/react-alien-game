@@ -1,3 +1,9 @@
+/**
+ * This file - container for App component
+ * Connect App component to Redux
+ * Using mapStateToProps and mapDispatchToProps functions
+ */
+
 import { connect } from 'react-redux';
 import App from '../App';
 import {

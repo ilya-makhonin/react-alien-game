@@ -10,9 +10,9 @@ import StartGame from './StartGame';
 import Title from './Title';
 import CannonBall from './CannonBall';
 import Heart from './Heart';
+import { gameHeight } from '../utils/constants'
 
 const Canvas = (props) => {
-    const gameHeight = 1200;
     const viewBox = [window.innerWidth / -2, 100 - gameHeight, window.innerWidth, gameHeight];
     const lives = [];
     for (let i = 0; i < props.gameState.lives; i++) {
