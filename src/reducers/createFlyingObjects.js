@@ -4,7 +4,7 @@ import {
 } from '../utils/constants';
 
 export default (state) => {
-    if ( ! state.gameState.started) return state; // игра не запущена
+    if ( ! state.gameState.started) return state; // Game don't started
 
     const now = (new Date()).getTime();
     const { lastObjectCreatedAt, flyingObjects } = state.gameState;
@@ -13,7 +13,7 @@ export default (state) => {
         flyingObjects.length < maxFlyingObjects
     );
 
-    if ( ! createNewObject) return state; // нет нужды создавать новые объекты в данный момент
+    if ( ! createNewObject) return state; // Don't need create new object now
 
     const id = (new Date()).getTime();
     const predefinedPosition = Math.floor(Math.random() * maxFlyingObjects);
