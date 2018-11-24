@@ -19,6 +19,11 @@ const CannonBase = (props) => {
     const height = 60;
     const negativeHeight = height * -1;
 
+    /**
+     * Constants for create the form CannonBase Component
+     * @type {{initialAxis: {x: number, y: number}, initialControlPoint: {x: number, y: number}
+     *        endingControlPoint: {x: number, y: number}, endingAxis: {x: number, y: number}}}
+     */
     const cubicBezierCurve = {
         initialAxis: {
             x: -halfBase,
@@ -39,6 +44,7 @@ const CannonBase = (props) => {
     };
 
     return (
+        // Create the figure
         <g>
             <path
                 style={cannonBaseStyle}

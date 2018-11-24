@@ -3,11 +3,18 @@ import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const CannonPipe = (props) => {
+    // Styles for CannonPipe Component
     const cannonPipeStyle = {
         fill: '#999',
         stroke: '#666',
         strokeWidth: '2px',
     };
+
+    /**
+     * CSS Transform function
+     * @param props.rotation - degree of rotation
+     * @type {string}
+     */
     const transform = `rotate(${props.rotation}, 0, 0)`;
 
     const muzzleWidth = 40;
@@ -15,6 +22,11 @@ const CannonPipe = (props) => {
     const height = 100;
     const yBasis = 70;
 
+    /**
+     * Constants for create the form CannonPipe Component
+     * @type {{initialAxis: {x: number, y: number}, initialControlPoint: {x: number, y: number}
+     *        endingControlPoint: {x: number, y: number}, endingAxis: {x: number, y: number}}}
+     */
     const cubicBezierCurve = {
         initialAxis: {
             x: -halfMuzzle,
@@ -35,6 +47,7 @@ const CannonPipe = (props) => {
     };
 
     return (
+        // Create CannonPipe Component
         <g transform={transform}>
             <path
                 style={cannonPipeStyle}
