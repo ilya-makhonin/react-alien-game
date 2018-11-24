@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import { gameWidth } from '../utils/constants';
 
 const StartGame = (props) => {
-    const button = {
-        x: gameWidth / -2, // половина ширины
-        y: -280, // минус значит "над" (выше нуля)
+    /**
+     * StartGame Component configuration
+     * @type {{x: number, y: number, width, height: number, rx: number
+     *       ry: number, style: {fill: string, cursor: string}, onClick}}
+     */
+    const buttonConfig = {
+        x: gameWidth / -2,
+        y: -280,
         width: gameWidth,
         height: 200,
-        rx: 10, // border радиус
-        ry: 10, // border радиус
+        rx: 10,
+        ry: 10,
         style: {
             fill: 'transparent',
             cursor: 'pointer',
@@ -17,10 +22,15 @@ const StartGame = (props) => {
         onClick: props.onClick,
     };
 
-    const text = {
-        textAnchor: 'middle', // центр
-        x: 0, // центр относительно оси X
-        y: -150, // 150 выше нуля (по оси Y)
+    /**
+     * Configuration for a text
+     * @type {{textAnchor: string, x: number, y: number,
+     *       style: {fontFamily: string, fontSize: number, fill: string, cursor: string}, onClick: function}}
+     */
+    const textConfig = {
+        textAnchor: 'middle',
+        x: 0,
+        y: -150,
         style: {
             fontFamily: '"Joti One", cursive',
             fontSize: 60,
@@ -29,10 +39,12 @@ const StartGame = (props) => {
         },
         onClick: props.onClick,
     };
+
     return (
+        // Create StartGame Component
         <g filter="url(#shadow)">
-            <rect {...button} />
-            <text {...text}>
+            <rect {...buttonConfig} />
+            <text {...textConfig}>
                 Tap To Start!
             </text>
         </g>

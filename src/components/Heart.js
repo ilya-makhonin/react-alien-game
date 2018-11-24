@@ -3,12 +3,22 @@ import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const Heart = (props) => {
+    /**
+     * Styles for this Components
+     * @type {{fill: string, stroke: string, strokeWidth: string}}
+     */
     const heartStyle = {
         fill: '#da0d15',
         stroke: '#a51708',
         strokeWidth: '2px',
     };
 
+    /**
+     * In this case, Component consists of two "halves"
+     * @const leftSide and rightSide
+     * @type {{initialAxis: {x, y}, initialControlPoint: {x: number, y: number}
+     *       endingControlPoint: {x: number, y: number}, endingAxis: {x: number, y: number}}}
+     */
     const leftSide = {
         initialAxis: {
             x: props.position.x,
@@ -48,6 +58,7 @@ const Heart = (props) => {
     };
 
     return (
+        // Create Heart Component
         <g filter="url(#shadow)">
             <path
                 style={heartStyle}
