@@ -1,14 +1,14 @@
 import React from 'react';
-import { skyAndGroundWidth } from './../utils/constants';
+import { skyAndGroundWidth, gameHeight } from './../utils/constants';
 
 const Sky = () => {
+    // Background color for Sky Component
     const skyStyle = {
         fill: '#30abef',
     };
 
-    const gameHeight = 1200;
-
     return (
+        // Create a rectangular area (sky for the game)
         <rect
             style={skyStyle}
             x={skyAndGroundWidth / -2}

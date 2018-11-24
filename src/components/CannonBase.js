@@ -2,12 +2,18 @@ import React from 'react';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const CannonBase = (props) => {
+    // Styles for CannonBase Component
     const cannonBaseStyle = {
         fill: '#a16012',
         stroke: '#75450e',
         strokeWidth: '2px',
     };
 
+    /**
+     * Dimensions CannonBase Component
+     * @param baseWith, halfBase, height, negativeHeight
+     * @type {number}
+     */
     const baseWith = 80;
     const halfBase = 40;
     const height = 60;
