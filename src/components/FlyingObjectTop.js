@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const FlyingObjectTop = (props) => {
+    // Styles for FlyingObjectTop Component
     const style = {
         fill: '#b6b6b6',
         stroke: '#7d7d7d',
@@ -12,6 +13,11 @@ const FlyingObjectTop = (props) => {
     const halfBase = 20;
     const height = 25;
 
+    /**
+     * Form for FlyingObjectTop Component
+     * @type {{initialAxis: {x: number, y}, initialControlPoint: {x: number, y: number}
+     *       endingControlPoint: {x: number, y: number}, endingAxis: {x: number, y: number}}}
+     */
     const cubicBezierCurve = {
         initialAxis: {
             x: props.position.x - halfBase,

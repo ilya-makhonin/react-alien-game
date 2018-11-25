@@ -5,6 +5,7 @@ import FlyingObjectBase from './FlyingObjectBase';
 import FlyingObjectTop from './FlyingObjectTop';
 import { gameHeight } from '../utils/constants';
 
+// Configuration keyframes for animation flying
 const moveVertically = keyframes`
   0% {
     transform: translateY(0);
@@ -14,11 +15,13 @@ const moveVertically = keyframes`
   }
 `;
 
+// Move Component with animation flying
 const Move = styled.g`
   animation: ${moveVertically} 4s linear;
 `;
 
 const FlyingObject = props => (
+    // Create full FlyingObject Component (Base and Top)
     <Move>
         <FlyingObjectBase position={props.position} />
         <FlyingObjectTop position={props.position} />

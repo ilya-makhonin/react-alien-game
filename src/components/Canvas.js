@@ -16,6 +16,10 @@ const Canvas = (props) => {
     const viewBox = [window.innerWidth / -2, 100 - gameHeight, window.innerWidth, gameHeight];
     const lives = [];
     for (let i = 0; i < props.gameState.lives; i++) {
+        /**
+         * Heart count: like [<Heart />, ...]
+         * @type {{x: number, y: number}}
+         */
         const heartPosition = {
             x: -180 - (i * 70),
             y: 35
