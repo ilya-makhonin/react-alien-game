@@ -9,6 +9,7 @@ const Title = () => {
         fill: '#cbca62',
     };
 
+    // Text "Aliens" stylization
     const aliensLineCurve = {
         initialAxis: {
             x: -190,
@@ -28,6 +29,7 @@ const Title = () => {
         },
     };
 
+    // // Text "Go Home" stylization
     const goHomeLineCurve = {
         ...aliensLineCurve,
         initialAxis: {
