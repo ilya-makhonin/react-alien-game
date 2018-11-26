@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const CannonPipe = (props) => {
-    // Styles for CannonPipe Component
+    // Styles for CannonPipe Component [ColorInside, ColorOutside, WidthOutsideLine]
     const cannonPipeStyle = {
         fill: '#999',
         stroke: '#666',

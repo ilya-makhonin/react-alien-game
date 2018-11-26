@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FlyingObjectBase = (props) => {
-    // Styles for FlyingObjectBase Component
+    // Styles for FlyingObjectBase Component [ColorInside, ColorOutside]
     const style = {
         fill: '#979797',
         stroke: '#5c5c5c',

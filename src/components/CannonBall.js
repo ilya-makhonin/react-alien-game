@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CannonBall = (props) => {
-    //Styles for the ball
+    //Styles for the ball [ColorInside, ColorOutside, WidthOutsideLine]
     const ballStyle = {
         fill: '#777',
         stroke: '#444',

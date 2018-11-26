@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const FlyingObjectTop = (props) => {
-    // Styles for FlyingObjectTop Component
+    // Styles for FlyingObjectTop Component [ColorInside, ColorOutside]
     const style = {
         fill: '#b6b6b6',
         stroke: '#7d7d7d',

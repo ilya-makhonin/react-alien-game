@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CurrentScore = (props) => {
-    // Styles for the score in the game
+    // Styles for the score in the game [Font, Font-Size, Color]
     const scoreStyle = {
         fontFamily: '"Joti One", cursive',
         fontSize: 80,

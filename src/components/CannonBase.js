@@ -2,7 +2,7 @@ import React from 'react';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const CannonBase = (props) => {
-    // Styles for CannonBase Component
+    // Styles for CannonBase Component [ColorInside, ColorOutside, WidthOutsideLine]
     const cannonBaseStyle = {
         fill: '#a16012',
         stroke: '#75450e',

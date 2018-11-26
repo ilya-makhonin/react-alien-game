@@ -2,6 +2,7 @@ import React from 'react';
 import { pathFromBezierCurve } from '../utils/formula';
 
 const Title = () => {
+    // Styles for Title Component: [Font, Font-Size, Color]
     const textStyle = {
         fontFamily: '"Joti One", cursive',
         fontSize: 120,
