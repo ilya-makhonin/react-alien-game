@@ -6,10 +6,14 @@
 
 import { connect } from 'react-redux';
 import App from '../App';
-import {
-    moveObjects, startGame, shoot
-} from '../actions/index';
+import { moveObjects, startGame, shoot } from '../actions/index';
 
+/**
+ *
+ * @param state <object> like: {angel: <int>, gameState: <object>}
+ * @property gameState type <object> like {started: <bool>, cannonBalls: <arr>, flyingObjects: <arr>,
+ *                                         kills: <int>, lives: <int>, lastObjectCreatedAt: <data_time> (unique)}
+ */
 const mapStateToProps = state => ({
     angle: state.angle,
     gameState: state.gameState,
