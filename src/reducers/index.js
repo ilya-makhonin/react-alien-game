@@ -4,6 +4,11 @@ import { MOVE_OBJECTS, SHOOT, START_GAME } from '../actions';
 
 import shoot from './shoot';
 
+/**
+ * Initial state for game operation
+ * @type {{started: boolean, kills: number, lives: number, flyingObjects: Array,
+ *       lastObjectCreatedAt: Date, cannonBalls: Array}}
+ */
 const initialGameState = {
     started: false,
     kills: 0,
@@ -13,10 +18,21 @@ const initialGameState = {
     cannonBalls: [],
 };
 
+/**
+ * Full initial state for game
+ * @type {{angle: number, gameState: {initialGameState}}}
+ */
 const initialState = {
     angle: 45,
     gameState: initialGameState,
 };
+
+/**
+ * Base reducer
+ * @param state <object>
+ * @param action <string>
+ * @return { newGameState } <object>
+ */
 
 function reducer(state = initialState, action) {
     switch (action.type) {
