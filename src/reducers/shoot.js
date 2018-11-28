@@ -19,6 +19,7 @@ function shoot(state, action) {
         id,
     };
 
+    // Update game state. Only property "cannonBall"
     return {
         ...state,
         gameState: {
