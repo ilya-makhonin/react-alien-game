@@ -4,7 +4,7 @@ import moveBalls from './moveCannonBalls';
 import checkCollisions from './checkCollisions';
 
 function moveObjects(state, action) {
-    if (!state.gameState.started) return state;
+    if (!state.gameState.started) return state; // If the game don't started return initial state
 
     let cannonBalls = moveBalls(state.gameState.cannonBalls);
 
@@ -27,6 +27,7 @@ function moveObjects(state, action) {
         lives--;
     }
 
+    // If lives equal zero - stop the game. To install initial values
     const started = lives > 0;
     if (!started) {
         flyingObjects = [];
@@ -45,6 +46,7 @@ function moveObjects(state, action) {
 
     const kills = state.gameState.kills + flyingDiscsDestroyed.length;
 
+    // Updating game state
     return {
         ...newState,
         gameState: {
