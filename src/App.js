@@ -16,6 +16,7 @@ class App extends Component {
             self.props.moveObjects(self.canvasMousePosition);
         }, 10);
 
+        // responsive
         window.onresize = () => {
             const cnv = document.getElementById('aliens-go-home-canvas');
             cnv.style.width = `${window.innerWidth}px`;
